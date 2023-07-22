@@ -1,4 +1,5 @@
 @import "../../../style/variables.scss";
+@import "../../../style/mixin.scss";
 
 .WhatIDo {
   $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
@@ -10,6 +11,11 @@
   width: 100%;
   overflow: hidden;
   font-family: "Marcellus";
+
+  // スマホ以下
+  @include respondToSm {
+    padding: 100px 36px;
+  }
 
   .WhatIDo__title {
     position: absolute;
@@ -24,7 +30,7 @@
   }
 
   .WhatIDo__sliderWrapper {
-    padding: 40px 40px 8px;
+    padding: 40px 0 8px;
   }
 
   .WhatIDo__sliderContent {
@@ -39,13 +45,22 @@
       width: calc(100% - 16px);
       height: 100%;
       background-color: #000;
-      opacity: 0.7;
+      opacity: 0.5;
       transition-duration: 0.2s;
     }
 
     &--current {
       &::after {
         opacity: 0;
+      }
+    }
+
+    // スマホ以下
+    @include respondToSm {
+      padding: 0 16px;
+
+      &::after {
+        display: none;
       }
     }
   }
@@ -105,6 +120,11 @@
     padding: 0 40px;
     font-family: "Shippori Mincho";
     color: $font-color-blue;
+
+    // スマホ以下
+    @include respondToSm {
+      padding: 0;
+    }
   }
 
   .WhatIDo__slideTitle {

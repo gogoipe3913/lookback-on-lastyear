@@ -1,4 +1,5 @@
 @import "../../../style/variables";
+@import "../../../style/mixin.scss";
 
 $timing-function-text: cubic-bezier(0.86, 0, 0.79, 0);
 $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
@@ -12,6 +13,11 @@ $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
   color: $font-color-blue;
   transition-duration: 0.3s;
 
+  @include respondToLg {
+    padding-top: 100px;
+    padding-left: 36px;
+  }
+
   .LookBack__sideColumn {
     flex-shrink: 0;
     position: sticky;
@@ -21,6 +27,10 @@ $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
     margin-bottom: 48px;
     min-width: 120px;
     height: fit-content;
+
+    @include respondToSm {
+      font-size: 13px;
+    }
   }
 
   .LookBack__sortItems {
@@ -57,6 +67,11 @@ $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
     margin-left: 160px;
     // ソートカラムのsticky開始ポジションをハンバーガーメニューと合わせる
     padding-top: 48px;
+
+    // スマホ以下
+    @include respondToSm {
+      margin-left: 8px;
+    }
   }
 
   .LookBack__items {
@@ -84,6 +99,10 @@ $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
     transform: translateY(0px);
     transition-duration: 0.5s;
     transition-timing-function: $timing-function-image;
+
+    @include respondToSm {
+      margin-right: 0;
+    }
   }
 
   .LookBack__item--inactive {
@@ -132,11 +151,20 @@ $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
 
   .LookBack__itemTitleText {
     flex-shrink: 0;
+
+    // スマホ以下
+    @include respondToSm {
+      font-size: 14px;
+    }
   }
 
   .LookBack__itemTitleMonth {
     margin-left: 24px;
     font-size: 13px;
+
+    @include respondToSm {
+      font-size: 10px;
+    }
   }
 
   .LookBack__imageContainer {
@@ -144,6 +172,11 @@ $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
     width: 224px;
     height: 660px;
     overflow: hidden;
+
+    @include respondToSm {
+      width: 180px;
+      height: 528px;
+    }
   }
 
   .LookBack__link {
@@ -153,6 +186,10 @@ $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
   .LookBack__itemImage {
     margin-left: 24px;
     width: 200px;
+
+    @include respondToSm {
+      width: 180px;
+    }
   }
 
   .LookBack__colorVeil {

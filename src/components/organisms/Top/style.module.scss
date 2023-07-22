@@ -1,4 +1,5 @@
 @import "../../../style/variables.scss";
+@import "../../../style/mixin.scss";
 
 .Top {
   position: relative;
@@ -7,6 +8,11 @@
   width: 100%;
   height: 100vh;
   font-family: "Marcellus";
+
+  // スマホ以下
+  @include respondToSm {
+    padding: 20px;
+  }
 
   .Top__titleBox {
     position: absolute;
@@ -43,6 +49,12 @@
     width: 32%;
     max-width: 420px;
     overflow: hidden;
+
+    // デスクトップ以下
+    @include respondToLg {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   .Top__video {
@@ -70,6 +82,11 @@
     font-size: 5.8vw;
     letter-spacing: 0.08em;
     font-family: "Classico URW";
+
+    // スマホ以下
+    @include respondToSm {
+      font-size: 5.4vw;
+    }
   }
 
   .Top__titleOnImageSubTitle {
@@ -78,6 +95,11 @@
     color: $font-color-white;
     letter-spacing: 0.3em;
     text-align: center;
+
+    // スマホ以下
+    @include respondToSm {
+      font-size: 11px;
+    }
   }
 
   .Top__scrollIndicator {
