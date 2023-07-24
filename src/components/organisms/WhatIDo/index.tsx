@@ -52,7 +52,7 @@ const WhatIDo: React.FC<WhatIDoProps> = ({ className = "" }) => {
     slidesToShow: slidesToShow,
     centerMode: true,
     centerPadding: "0px",
-    beforeChange: (current, next) => {
+    beforeChange: (_, next) => {
       setCurrentSlideNumber(next);
       setProgressBarWidth(0);
     },
@@ -90,10 +90,6 @@ const WhatIDo: React.FC<WhatIDoProps> = ({ className = "" }) => {
         const nextSlide = (currentSlideNumber + 1) % images.length;
         sliderRef.current?.slickGoTo(nextSlide);
       }, AUTO_SLIDE_INTERVAL);
-    };
-
-    const resetProgressBar = () => {
-      setProgressBarWidth(0);
     };
 
     const updateProgressBar = () => {
