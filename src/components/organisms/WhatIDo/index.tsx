@@ -26,6 +26,7 @@ const images = [
   {
     src: "../../../../public/images/whatIDo/risograph.png",
   },
+  // ... Add other images here
 ];
 
 type WhatIDoProps = {
@@ -33,52 +34,109 @@ type WhatIDoProps = {
 };
 
 const WhatIDo: React.FC<WhatIDoProps> = ({ className = "" }) => {
-  const AUTO_SLIDE_INTERVAL_SECOND = 8000; // 8000msで自動スライド
+  const AUTO_SLIDE_INTERVAL = 8000; // 8000msで自動スライド
   const SET_INTERVAL_SECOND = 10; // 10ms毎にプログレスバーの幅を再計算
-  const PROGRESS_MAX_WIDTH = 100; // 100pxが最大幅
-  const [currentSlideNumber, setCurrentSlideNumber] = useState(1); // 枚数中のcurrent
-  const [currentSlideSerialNumber, setCurrentSlideSerialNumber] = useState(1); // 通し番号中のcurrent
-  const [progressBarCurrentWidth, setProgressBarCurrentWidth] = useState(0);
-  const [slider, setSlider] = useState<Slider | null>(null);
+
+  const [currentSlideNumber, setCurrentSlideNumber] = useState(0);
+  const [progressBarWidth, setProgressBarWidth] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3); // 初期値は3
+  const sliderRef = useRef<Slider | null>(null);
+
   const settings: Settings = {
     initialSlide: 0,
     dots: false,
-    autoplay: false,
+    autoplay: false, // 自動スライドは無効にする
     focusOnSelect: false,
     speed: 500,
     waitForAnimate: true,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
+    centerMode: true,
+    centerPadding: "0px",
+    beforeChange: (_, next) => {
+      setCurrentSlideNumber(next);
+      setProgressBarWidth(0);
+    },
+    afterChange: (current) => {
+      setCurrentSlideNumber(current);
+    },
   };
 
   useEffect(() => {
-    let width = 0;
-    const interval = setInterval(() => {
-      if (width >= AUTO_SLIDE_INTERVAL_SECOND / SET_INTERVAL_SECOND) {
-        setProgressBarCurrentWidth(0);
-        width = 0;
-        clearInterval(interval);
-        setCurrentSlideSerialNumber(currentSlideSerialNumber + 1);
-        if (currentSlideNumber < 6) {
-          setCurrentSlideNumber(currentSlideNumber + 1);
-        } else {
-          setCurrentSlideNumber(
-            currentSlideNumber - 5 * Math.trunc(currentSlideNumber / 6)
-          );
-        }
+    const handleResize = () => {
+      if (window.innerWidth <= 576) {
+        setSlidesToShow(1);
       } else {
-        width++;
-        setProgressBarCurrentWidth(
-          width /
-            (AUTO_SLIDE_INTERVAL_SECOND /
-              SET_INTERVAL_SECOND /
-              PROGRESS_MAX_WIDTH)
-        );
+        setSlidesToShow(3);
       }
-    }, SET_INTERVAL_SECOND);
+    };
 
-    if (slider) {
-      slider.slickGoTo(currentSlideSerialNumber - 1);
-    }
+    // 初回レンダリング時に一度だけ呼び出す
+    handleResize();
+
+    // 画面サイズの変化を監視する
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      // イベントリスナーを削除
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    let intervalId: number;
+
+    const startAutoSlide = () => {
+      intervalId = window.setInterval(() => {
+        const nextSlide = (currentSlideNumber + 1) % images.length;
+        sliderRef.current?.slickGoTo(nextSlide);
+      }, AUTO_SLIDE_INTERVAL);
+    };
+
+    const updateProgressBar = () => {
+      setProgressBarWidth((prevWidth) => {
+        const remainingWidth = AUTO_SLIDE_INTERVAL - SET_INTERVAL_SECOND;
+        return Math.min(prevWidth + SET_INTERVAL_SECOND, remainingWidth);
+      });
+    };
+
+    const stopAutoSlide = () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+
+    // 自動スライドを開始する
+    startAutoSlide();
+
+    // プログレスバーのアニメーションを開始する
+    let progressBarInterval = setInterval(
+      updateProgressBar,
+      SET_INTERVAL_SECOND
+    );
+
+    // スライダーが画面からフォーカスを外れた場合に自動スライドとプログレスバーのアニメーションを停止する
+    const handleBlur = () => {
+      stopAutoSlide();
+      clearInterval(progressBarInterval);
+    };
+
+    // スライダーが画面にフォーカスを戻した場合に自動スライドとプログレスバーのアニメーションを再開する
+    const handleFocus = () => {
+      startAutoSlide();
+      progressBarInterval = setInterval(updateProgressBar, SET_INTERVAL_SECOND);
+    };
+
+    // イベントリスナーを追加
+    window.addEventListener("blur", handleBlur);
+    window.addEventListener("focus", handleFocus);
+
+    return () => {
+      // イベントリスナーを削除
+      window.removeEventListener("blur", handleBlur);
+      window.removeEventListener("focus", handleFocus);
+      clearInterval(progressBarInterval);
+      stopAutoSlide();
+    };
   }, [currentSlideNumber]);
 
   return (
@@ -90,21 +148,15 @@ const WhatIDo: React.FC<WhatIDoProps> = ({ className = "" }) => {
           <span className={style.WhatIDo__titleRow}>What I do?</span>
         </p>
         <div className={style.WhatIDo__sliderWrapper}>
-          <Slider
-            ref={(_slider) => {
-              setSlider(_slider);
-            }}
-            {...settings}
-          >
+          <Slider ref={sliderRef} {...settings}>
             {images.map((img, index) => (
               <div
                 key={index}
                 className={classNames(
                   style.WhatIDo__sliderContent,
-                  currentSlideNumber === index ||
-                    (currentSlideNumber === 6 && index === 0)
+                  currentSlideNumber === index
                     ? style["WhatIDo__sliderContent--current"]
-                    : ""
+                    : style["WhatIDo__sliderContent--masked"] // 前後のスライドにマスクをかける
                 )}
               >
                 <img src={img.src} alt="picture" />
@@ -117,21 +169,23 @@ const WhatIDo: React.FC<WhatIDoProps> = ({ className = "" }) => {
             <span className={style.WhatIDo__progressBarBase} />
             <span
               className={style.WhatIDo__progressBarCurrent}
-              style={{ width: `${progressBarCurrentWidth}px` }}
+              style={{
+                width: `${(progressBarWidth / AUTO_SLIDE_INTERVAL) * 100}%`,
+              }}
             />
           </span>
-          <span
-            className={style.WhatIDo__numbers}
-          >{`0${currentSlideNumber} / 06`}</span>
+          <span className={style.WhatIDo__numbers}>{`0${
+            currentSlideNumber + 1
+          } / 06`}</span>
         </p>
       </FadeInContainer>
       <FadeInContainer>
         <div className={style.WhatIDo__slideText}>
           <p className={style.WhatIDo__slideTitle}>
-            {slideContents[currentSlideNumber - 1].title}
+            {slideContents[currentSlideNumber].title}
           </p>
           <p className={style.WhatIDo__slideContent}>
-            {slideContents[currentSlideNumber - 1].text}
+            {slideContents[currentSlideNumber].text}
           </p>
         </div>
       </FadeInContainer>

@@ -87,6 +87,8 @@ const LookBackItem: React.FC<LookBackItemProps> = ({
         >
           <Link to="/one" className={style.LookBack__link}>
             <img
+              // width={180}
+              // height={528}
               width={200}
               height={660}
               src={url}

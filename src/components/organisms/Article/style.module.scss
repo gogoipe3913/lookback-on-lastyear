@@ -1,4 +1,5 @@
 @import "../../../style/variables.scss";
+@import "../../../style/mixin.scss";
 
 .Article {
   $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
@@ -30,17 +31,24 @@
     color: $font-color-red;
     line-height: 1;
 
-    &:hover {
-      color: $font-color-blue;
+    @media (hover: hover) {
+      &:hover {
+        color: $font-color-blue;
 
-      .Article__linkArrowAngle,
-      .Article__linkArrow {
-        background-color: $font-color-blue;
-      }
+        .Article__linkArrowAngle,
+        .Article__linkArrow {
+          background-color: $font-color-blue;
+        }
 
-      .Article__linkArrow {
-        width: 48px;
+        .Article__linkArrow {
+          width: 48px;
+        }
       }
+    }
+
+    // スマホ以下
+    @include respondToSm {
+      display: none;
     }
   }
 
@@ -82,21 +90,43 @@
     color: $font-color-white;
     transform-origin: bottom left;
     transform: rotate(90deg);
+
+    // スマホ以下
+    @include respondToSm {
+      top: 60px;
+      left: 36px;
+    }
   }
 
   .Article__titleVerticalBody {
     font-size: 20px;
+
+    @include respondToSm {
+      font-size: 16px;
+    }
   }
 
   .Article__titleVerticalMonth {
     margin-left: 24px;
     font-size: 14px;
+
+    @include respondToSm {
+      font-size: 11px;
+    }
   }
 
   .Article__scrollIndicator {
     position: absolute;
     right: -28px;
     bottom: 64px;
+
+    // デスクトップ以下
+    @include respondToLg {
+      z-index: 20;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
   }
 
   .Article__contentWrapper {
@@ -106,21 +136,43 @@
     padding: 280px 200px 0;
     width: 100%;
     background-color: $font-color-white;
+
+    // スマホ以下
+    @include respondToSm {
+      padding: 200px 36px 0;
+    }
   }
 
   .Article__content {
     display: flex;
+
+    // スマホ以下
+    @include respondToSm {
+      flex-direction: column;
+    }
   }
 
   .Article__leftColumn {
     padding-top: 180px;
     max-width: calc(50vw - 560px);
     min-width: 360px;
+
+    // スマホ以下
+    @include respondToSm {
+      padding: 0;
+      max-width: 100%;
+      min-width: 0;
+    }
   }
 
   .Article__title {
     font-size: 20px;
     letter-spacing: 0.1em;
+
+    // スマホ以下
+    @include respondToSm {
+      font-size: 18px;
+    }
   }
 
   .Article__date {
@@ -137,6 +189,16 @@
       height: 1px;
       background-color: $font-color-blue;
     }
+
+    // スマホ以下
+    @include respondToSm {
+      font-size: 11px;
+      text-align: left;
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
   .Article__text {
@@ -145,11 +207,23 @@
     font-family: "Shippori Mincho";
     line-height: 2;
     letter-spacing: 0.1em;
+
+    // スマホ以下
+    @include respondToSm {
+      margin-top: 20px;
+      font-size: 12px;
+    }
   }
 
   .Article__tag {
     margin-top: 100px;
     color: $font-color-red;
+
+    // スマホ以下
+    @include respondToSm {
+      margin-top: 40px;
+      font-size: 14px;
+    }
   }
 
   .Article__tagBody {
@@ -172,6 +246,16 @@
       height: 1px;
       background-color: $font-color-blue;
     }
+
+    // スマホ以下
+    @include respondToSm {
+      &::before {
+        margin-bottom: 16px;
+      }
+      &::after {
+        margin-top: 16px;
+      }
+    }
   }
 
   .Article__textEnglish {
@@ -179,14 +263,31 @@
     font-size: 13px;
     line-height: 2;
     letter-spacing: 0.1em;
+
+    // スマホ以下
+    @include respondToSm {
+      margin-top: 40px;
+      font-size: 11px;
+    }
   }
 
   .Article__rightColumn {
     flex-grow: 1;
     margin-left: 100px;
+
+    // スマホ以下
+    @include respondToSm {
+      margin-top: 120px;
+      margin-left: 0;
+    }
   }
 
   .Article__imageFigure + .Article__imageFigure {
     margin-top: 100px;
+
+    // スマホ以下
+    @include respondToSm {
+      margin-top: 120px;
+    }
   }
 }

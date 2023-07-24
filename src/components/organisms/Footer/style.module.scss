@@ -1,4 +1,5 @@
 @import "../../../style/variables.scss";
+@import "../../../style/mixin.scss";
 
 .Footer {
   margin-top: 200px;
@@ -9,4 +10,9 @@
   text-align: center;
   letter-spacing: 0.1em;
   font-family: "Marcellus";
+
+  // スマホ以下
+  @include respondToSm {
+    margin-top: 60px;
+  }
 }

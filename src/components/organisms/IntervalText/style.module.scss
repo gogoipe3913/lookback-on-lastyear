@@ -1,4 +1,5 @@
 @import "../../../style/variables";
+@import "../../../style/mixin.scss";
 
 .IntervalText {
   padding: 200px 0;
@@ -12,6 +13,10 @@
     font-family: "Marcellus";
     color: transparent;
     -webkit-text-stroke: 1px $font-color-blue;
+
+    @include respondToSm {
+      font-size: 80px;
+    }
   }
 
   .IntervalText__textBefore {
@@ -20,6 +25,10 @@
     min-width: 100%;
     width: min-content;
     animation: 40s linear infinite slideToRightAnimation;
+
+    @include respondToSm {
+      margin-left: -860%;
+    }
   }
 
   .IntervalText__textBeforeBody {

@@ -1,4 +1,5 @@
 @import "../../../style/variables.scss";
+@import "../../../style/mixin.scss";
 
 .About {
   position: relative;
@@ -9,10 +10,20 @@
   color: $font-color-blue;
   text-align: center;
 
+  // スマホ以下
+  @include respondToSm {
+    padding: 28% 20px;
+  }
+
   .About__text {
     font-size: 14px;
     line-height: 2.6em;
     letter-spacing: 0.16em;
+
+    // スマホ以下
+    @include respondToSm {
+      font-size: 11px;
+    }
   }
 
   .About__textEnglish {
@@ -20,5 +31,9 @@
     font-size: 11px;
     line-height: 2.2em;
     letter-spacing: 0.05em;
+
+    @include respondToSm {
+      font-size: 10px;
+    }
   }
 }
