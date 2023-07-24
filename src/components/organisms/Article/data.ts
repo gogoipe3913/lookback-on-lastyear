@@ -1,7 +1,7 @@
-import mainImage1 from "../../../../public/images/articles/1/test_article_main.png";
-import imageFigure1 from "../../../../public/images/articles/1/imageFigures/imageFigure_1.png";
-import imageFigure2 from "../../../../public/images/articles/1/imageFigures/imageFigure2.png";
-import imageFigure3 from "../../../../public/images/articles/1/imageFigures/imageFigure3.png";
+import mainImage1 from "/images/articles/1/test_article_main.png";
+import imageFigure1 from "/images/articles/1/imageFigures/imageFigure_1.png";
+import imageFigure2 from "/images/articles/1/imageFigures/imageFigure2.png";
+import imageFigure3 from "/images/articles/1/imageFigures/imageFigure3.png";
 
 export enum ARTICLE_TYPE {
   ONE = "one",

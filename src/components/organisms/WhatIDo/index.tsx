@@ -9,22 +9,22 @@ import { FadeInContainer } from "../../atoms/FadeInContainer";
 
 const images = [
   {
-    src: "../../../../public/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/risograph.png",
   },
   {
-    src: "../../../../public/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/risograph.png",
   },
   {
-    src: "../../../../public/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/risograph.png",
   },
   {
-    src: "../../../../public/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/risograph.png",
   },
   {
-    src: "../../../../public/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/risograph.png",
   },
   {
-    src: "../../../../public/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/risograph.png",
   },
   // ... Add other images here
 ];
