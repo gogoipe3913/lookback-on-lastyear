@@ -26,9 +26,7 @@ const images = [
   {
     src: "../../../../public/images/whatIDo/risograph.png",
   },
-  {
-    src: "../../../../public/images/whatIDo/risograph.png",
-  },
+  // ... Add other images here
 ];
 
 type WhatIDoProps = {
@@ -41,55 +39,106 @@ const WhatIDo: React.FC<WhatIDoProps> = ({ className = "" }) => {
 
   const [currentSlideNumber, setCurrentSlideNumber] = useState(0);
   const [progressBarWidth, setProgressBarWidth] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3); // 初期値は3
   const sliderRef = useRef<Slider | null>(null);
 
   const settings: Settings = {
     initialSlide: 0,
     dots: false,
-    autoplay: false,
+    autoplay: false, // 自動スライドは無効にする
     focusOnSelect: false,
     speed: 500,
     waitForAnimate: true,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
     centerMode: true,
-    centerPadding: "0px", // 追加：センターモード時のスライド間の余白を0に設定
+    centerPadding: "0px",
     beforeChange: (current, next) => {
       setCurrentSlideNumber(next);
-      setProgressBarWidth(0); // スライド切り替え時にプログレスバーをリセット
+      setProgressBarWidth(0);
+    },
+    afterChange: (current) => {
+      setCurrentSlideNumber(current);
     },
   };
 
   useEffect(() => {
-    let intervalId: number | null = null;
-    let progressBarInterval: number | null = null;
+    const handleResize = () => {
+      if (window.innerWidth <= 576) {
+        setSlidesToShow(1);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
+
+    // 初回レンダリング時に一度だけ呼び出す
+    handleResize();
+
+    // 画面サイズの変化を監視する
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      // イベントリスナーを削除
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    let intervalId: number;
 
     const startAutoSlide = () => {
       intervalId = window.setInterval(() => {
         const nextSlide = (currentSlideNumber + 1) % images.length;
         sliderRef.current?.slickGoTo(nextSlide);
       }, AUTO_SLIDE_INTERVAL);
+    };
 
-      // プログレスバーのアニメーションをセット
-      progressBarInterval = window.setInterval(() => {
-        setProgressBarWidth((prevWidth) => {
-          const remainingWidth = AUTO_SLIDE_INTERVAL - SET_INTERVAL_SECOND;
-          return Math.min(prevWidth + SET_INTERVAL_SECOND, remainingWidth);
-        });
-      }, SET_INTERVAL_SECOND);
+    const resetProgressBar = () => {
+      setProgressBarWidth(0);
+    };
+
+    const updateProgressBar = () => {
+      setProgressBarWidth((prevWidth) => {
+        const remainingWidth = AUTO_SLIDE_INTERVAL - SET_INTERVAL_SECOND;
+        return Math.min(prevWidth + SET_INTERVAL_SECOND, remainingWidth);
+      });
     };
 
     const stopAutoSlide = () => {
       if (intervalId) {
         clearInterval(intervalId);
       }
-      if (progressBarInterval) {
-        clearInterval(progressBarInterval);
-      }
     };
 
+    // 自動スライドを開始する
     startAutoSlide();
 
+    // プログレスバーのアニメーションを開始する
+    let progressBarInterval = setInterval(
+      updateProgressBar,
+      SET_INTERVAL_SECOND
+    );
+
+    // スライダーが画面からフォーカスを外れた場合に自動スライドとプログレスバーのアニメーションを停止する
+    const handleBlur = () => {
+      stopAutoSlide();
+      clearInterval(progressBarInterval);
+    };
+
+    // スライダーが画面にフォーカスを戻した場合に自動スライドとプログレスバーのアニメーションを再開する
+    const handleFocus = () => {
+      startAutoSlide();
+      progressBarInterval = setInterval(updateProgressBar, SET_INTERVAL_SECOND);
+    };
+
+    // イベントリスナーを追加
+    window.addEventListener("blur", handleBlur);
+    window.addEventListener("focus", handleFocus);
+
     return () => {
+      // イベントリスナーを削除
+      window.removeEventListener("blur", handleBlur);
+      window.removeEventListener("focus", handleFocus);
+      clearInterval(progressBarInterval);
       stopAutoSlide();
     };
   }, [currentSlideNumber]);
@@ -111,7 +160,7 @@ const WhatIDo: React.FC<WhatIDoProps> = ({ className = "" }) => {
                   style.WhatIDo__sliderContent,
                   currentSlideNumber === index
                     ? style["WhatIDo__sliderContent--current"]
-                    : ""
+                    : style["WhatIDo__sliderContent--masked"] // 前後のスライドにマスクをかける
                 )}
               >
                 <img src={img.src} alt="picture" />

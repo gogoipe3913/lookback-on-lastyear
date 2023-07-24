@@ -106,5 +106,13 @@
     position: absolute;
     right: -28px;
     bottom: 64px;
+
+    // デスクトップ以下
+    @include respondToLg {
+      z-index: 20;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
   }
 }

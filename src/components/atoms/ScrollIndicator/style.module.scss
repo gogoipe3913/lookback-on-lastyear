@@ -1,12 +1,17 @@
 @import "../../../style/variables.scss";
+@import "../../../style/mixin.scss";
 
 .ScrollIndicator {
   width: 174px;
-
   font-size: 14px;
   color: $font-color-red;
   letter-spacing: 0.03em;
   transform: rotate(90deg);
+
+  // デスクトップ以下
+  @include respondToLg {
+    color: $font-color-white;
+  }
 
   &::after {
     content: "";
@@ -23,6 +28,11 @@
     animation-duration: 2.1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+
+    // デスクトップ以下
+    @include respondToLg {
+      background-color: $font-color-white;
+    }
   }
 }
 

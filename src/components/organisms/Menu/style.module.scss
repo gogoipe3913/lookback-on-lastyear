@@ -11,15 +11,17 @@
     z-index: 31;
     width: 40px;
 
-    &:hover {
-      .Menu__humbergerButtonLine--top {
-        width: 16px;
-      }
-      .Menu__humbergerButtonLine--center {
-        width: 20px;
-      }
-      .Menu__humbergerButtonLine--bottom {
-        width: 28px;
+    @media (hover: hover) {
+      &:hover {
+        .Menu__humbergerButtonLine--top {
+          width: 16px;
+        }
+        .Menu__humbergerButtonLine--center {
+          width: 20px;
+        }
+        .Menu__humbergerButtonLine--bottom {
+          width: 28px;
+        }
       }
     }
 
@@ -29,6 +31,16 @@
 
     @include respondToSm {
       left: 36px;
+
+      .Menu__humbergerButtonLine--top {
+        width: 16px;
+      }
+      .Menu__humbergerButtonLine--center {
+        width: 20px;
+      }
+      .Menu__humbergerButtonLine--bottom {
+        width: 28px;
+      }
     }
   }
 
@@ -82,11 +94,24 @@
       width: 60%;
       height: 70%;
     }
+
+    @include respondToSm {
+      padding-left: 36px;
+
+      &--displayed {
+        width: 80%;
+      }
+    }
   }
 
   .Menu__contentsList {
     padding-top: 200px;
     font-size: 18px;
+
+    @include respondToSm {
+      padding-top: 120px;
+      font-size: 15px;
+    }
   }
 
   .Menu__contentsItem + .Menu__contentsItem {
@@ -108,12 +133,14 @@
       transition-timing-function: $timing-function-text;
     }
 
-    &:hover {
-      color: $font-color-red;
+    @media (hover: hover) {
+      &:hover {
+        color: $font-color-red;
 
-      &::before {
-        width: 32px;
-        margin-right: 8px;
+        &::before {
+          width: 32px;
+          margin-right: 8px;
+        }
       }
     }
   }
@@ -126,8 +153,14 @@
     transition-duration: 0.3s;
     transition-timing-function: $timing-function-text;
 
-    &:hover {
-      color: $font-color-red;
+    @media (hover: hover) {
+      &:hover {
+        color: $font-color-red;
+      }
+    }
+
+    @include respondToSm {
+      font-size: 11px;
     }
   }
 

@@ -123,12 +123,18 @@
 
     // スマホ以下
     @include respondToSm {
+      margin-top: 48px;
       padding: 0;
     }
   }
 
   .WhatIDo__slideTitle {
     font-size: 18px;
+
+    // スマホ以下
+    @include respondToSm {
+      font-size: 16px;
+    }
   }
 
   .WhatIDo__slideContent {
@@ -136,5 +142,11 @@
     font-size: 14px;
     line-height: 2;
     letter-spacing: 0.1em;
+
+    // スマホ以下
+    @include respondToSm {
+      margin-top: 12px;
+      font-size: 12px;
+    }
   }
 }
