@@ -14,7 +14,7 @@ const Top: React.FC = () => {
             muted={true}
             autoPlay={true}
             loop={true}
-            src="/video/topVideo.mp4"
+            src="/video/topVisualVideo.mp4"
             className={style.Top__video}
           />
           <div className={style.Top__titleBoxOnImage}>
