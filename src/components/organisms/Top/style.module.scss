@@ -34,7 +34,7 @@
     letter-spacing: 0.08em;
     text-align: center;
     mix-blend-mode: soft-light;
-    font-family: "Marcellus";
+    font-family: "Classico URW";
   }
 
   .Top__videoWrapper {
@@ -81,7 +81,7 @@
     text-align: center;
     font-size: 5.8vw;
     letter-spacing: 0.08em;
-    font-family: "Marcellus";
+    font-family: "Classico URW";
 
     // スマホ以下
     @include respondToSm {
