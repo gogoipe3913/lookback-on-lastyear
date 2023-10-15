@@ -207,6 +207,7 @@
     font-family: "Shippori Mincho";
     line-height: 2;
     letter-spacing: 0.1em;
+    white-space: pre-line;
 
     // スマホ以下
     @include respondToSm {
@@ -263,6 +264,7 @@
     font-size: 13px;
     line-height: 2;
     letter-spacing: 0.1em;
+    white-space: pre-line;
 
     // スマホ以下
     @include respondToSm {
