@@ -59,16 +59,22 @@ export const Articles: ArticlesInterface = {
     ],
   },
   [ARTICLE_TYPE.TWO]: {
-    title: "IN KYOTO LIFE",
-    month: "February",
-    date: "2022.02.01",
+    title: "BECOME A DESIGN ENGINEER",
+    month: "April",
+    date: "2022.04.01",
     mainImage: {
       url: "",
       alt: "",
     },
-    text: "この場所は、自分の2022を振り返り2023年は何をするか、どうなりたいか一年の区切りを使って自分を知ってもらうために制作しましたこの場所は、自分の2022を振り返り2023年は何をするか、どうなりたいか一年の区切りを使って自分を知ってもらうために制作しましたこの場所は、自分の2022を振り返り2023年は何をするか、どうなりたいか一年の区切りを使って自分を知ってもらうために制作しましたこの場所は、自分の2022を振り返り2023年は何をするか、どうなりたいか一年の区切りを使って自分を知ってもらうために制作しましたこの場所は、自分の2022を振り返り20...",
-    textEnglish:
-      "I designed this website for self produce with my life through last year. I'll look back 2022 and consider what I do in 2023 from here.I designed this website for self produce with my life through last year. I'll look back 2022 and consider what I do in 2023 from here.I designed this website for self produce with my life through last year. I'll look back 2022 and consider what I do in 2023 from here.I designed this website for self produce with my life through last year. I'll look back 2022 and consider what I do in 2023 from here.",
+    text: `4月になって、会社員歴も3年になった。会社員らしからぬ暮らしぶりに驚く者もいよう、私だってそうである。職種が変わり、デザインエンジニアという名誉ありそうな奴隷のような役回りになった。デザインもエンジニアリングもするポジションである。
+    尊敬するtakramという会社の田川欣哉氏がデザインエンジニアという仕事を語る記事を読んだのを覚えている。多分10年前くらいの記事だったと思う。
+    この時は、「デザインもエンジニアリングもする」というよりは目的があってそのために必要なことをこなす人、みたいな形だろう…と解釈した。webの会社なのでwebだけを作っているが、web以外のことにもデザインエンジニア的に取り組みたいという気持ちのブーストをする機会だった。実際は「デザインもエンジニアリングもする」人になっていた。目的を見失わないように気をつけたい。
+    ‘21年から始めた個人事業ではそこそこ色んなデザインやモノづくりができているので、会社とプライベートを完全に分断しないような生き方ができればいいと感じた。会社の経験はその外に活かして、外の経験は会社で活きる、みたいな形が理想である。実際には、あっちにこっちにてんやわんやだった。`,
+    textEnglish: `In April, I reached three years in my career as a corporate employee. Some people might be surprised by the unconventional way I live my life as a corporate worker, and I'm no exception. My role has changed, and I've taken on the role of a design engineer, which sounds quite honorable but can feel somewhat like a slave. This position involves both design and engineering.
+
+      I remember reading an article about the job of a design engineer, given by Mr. Kin-ya Tagawa, who I greatly respect and who works at the company "takram." This was probably about ten years ago. At that time, I interpreted the role as someone who works toward a specific goal and does whatever is necessary to achieve it, rather than simply "doing both design and engineering." Since our company is web-based, we primarily create things for the web. However, this was an opportunity to boost my desire to approach things from a design engineering perspective beyond the web. In reality, I became someone who does both design and engineering. I want to make sure I don't lose sight of the purpose.
+      
+      In my personal business, which I started in 2021, I've been able to engage in various design and creative projects. I hope to live a life where I can seamlessly integrate my work and personal life, leveraging the experiences from one side to enhance the other. Ideally, my experiences in the corporate world should benefit my personal ventures, and my external experiences should enrich my corporate role. In practice, it's been a bit chaotic, trying to juggle both sides.`,
     tag: "NEW",
     imageFigures: [{ url: "", alt: "" }],
   },
