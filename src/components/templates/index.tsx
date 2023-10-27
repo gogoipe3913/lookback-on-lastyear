@@ -38,18 +38,50 @@ const Templates: React.FC = () => {
             }
           />
           <Route
-            path={`/${ARTICLE_TYPE.ONE}`}
+            path={`/${ARTICLE_TYPE.KYOTO_LIFE}`}
             element={
               <MainLayout>
-                <Article articleType={ARTICLE_TYPE.ONE} />
+                <Article articleType={ARTICLE_TYPE.KYOTO_LIFE} />
               </MainLayout>
             }
           />
           <Route
-            path={`/${ARTICLE_TYPE.TWO}`}
+            path={`/${ARTICLE_TYPE.DESIGN_ENGINEER}`}
             element={
               <MainLayout>
-                <Article articleType={ARTICLE_TYPE.TWO} />
+                <Article articleType={ARTICLE_TYPE.DESIGN_ENGINEER} />
+              </MainLayout>
+            }
+          />
+          <Route
+            path={`/${ARTICLE_TYPE.NEW_LIFE}`}
+            element={
+              <MainLayout>
+                <Article articleType={ARTICLE_TYPE.NEW_LIFE} />
+              </MainLayout>
+            }
+          />
+          <Route
+            path={`/${ARTICLE_TYPE.MIDORI}`}
+            element={
+              <MainLayout>
+                <Article articleType={ARTICLE_TYPE.MIDORI} />
+              </MainLayout>
+            }
+          />
+          <Route
+            path={`/${ARTICLE_TYPE.ACID_COFFEE_TOKYO}`}
+            element={
+              <MainLayout>
+                <Article articleType={ARTICLE_TYPE.ACID_COFFEE_TOKYO} />
+              </MainLayout>
+            }
+          />
+          <Route
+            path={`/${ARTICLE_TYPE.FIRST_VISITING}`}
+            element={
+              <MainLayout>
+                <Article articleType={ARTICLE_TYPE.FIRST_VISITING} />
               </MainLayout>
             }
           />
