@@ -26,6 +26,7 @@ type LookBackProps = {
 export type LookBackItemDataProps = {
   title: string;
   month: string;
+  slug: string;
   url: string;
   alt: string;
   isLife: boolean;
@@ -42,6 +43,7 @@ type LookBackItemProps = LookBackItemDataProps & {
 const LookBackItem: React.FC<LookBackItemProps> = ({
   title,
   month,
+  slug,
   url,
   alt,
   refs,
@@ -85,10 +87,8 @@ const LookBackItem: React.FC<LookBackItemProps> = ({
           ref={refs.current[itemIndex]}
           className={style.LookBack__imageContainer}
         >
-          <Link to="/one" className={style.LookBack__link}>
+          <Link to={`/${slug}`} className={style.LookBack__link}>
             <img
-              // width={180}
-              // height={528}
               width={200}
               height={660}
               src={url}
