@@ -53,12 +53,14 @@ $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
       transition-timing-function: $timing-function-text;
     }
 
-    &:hover {
-      color: $font-color-blue;
+    @media (hover: hover) {
+      &:hover {
+        color: $font-color-blue;
 
-      &::before {
-        width: 32px;
-        margin-right: 8px;
+        &::before {
+          width: 32px;
+          margin-right: 8px;
+        }
       }
     }
   }

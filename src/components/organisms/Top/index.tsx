@@ -11,6 +11,7 @@ const Top: React.FC = () => {
         </p>
         <div className={style.Top__videoFrame}>
           <video
+            playsInline
             muted={true}
             autoPlay={true}
             loop={true}
