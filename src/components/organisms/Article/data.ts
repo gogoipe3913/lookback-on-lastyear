@@ -137,8 +137,22 @@ export const Articles: ArticlesInterface = {
       url: "",
       alt: "",
     },
-    text: ``,
-    textEnglish: ``,
+    text: `渋谷の公園通りを上るか上がらないかの煮え切らない辺りにコーヒースタンドがあった。名をアシッドコーヒートウキョウと言い、その怪しげな名前とアナーキーな様子とは裏腹に、出てくるコーヒーは至高であった。自分は足繁くこの店に通い、7月15日もそのうちの一日であった。
+    スタッフと話しながらコーヒーを飲んでいると、駅方面から黒い上着にフードを被った金髪オールバックの男が歩いてきて、「君誰？バリスタやんない？」と言った。この傍若無人かつ唯我独尊味に溢れた男こそアシッドコーヒートウキョウのオーナー、Mr.塚田である。
+    
+    兼ねてからどこかコーヒーロースターで働きたいと思っていた自分にはこれ以上ないチャンス。もちろん答えは二つ返事で「やります」であった。そのままグアテマラのカップオブエクセレンスのカッピングをして、本気でやるなら履歴書送って？と言われ、その日のうちに履歴書を送り面接をし、こうしてまた数奇な方向に人生を寄せていった。
+    
+    Mr.塚田は、ファンキーかつアナーキーでエキセントリックだが、それ以上にエレガンスな人間であり、端的に言えば面白く魅力の宝庫のような人間であった。有り体に言えば、自分はこの男がすごく好きになっていた。読者諸賢、ここだけの話にしていただこう、沽券に関わる。
+    コーヒーもそれ以外も様々学び、多大なる恩がある。アシッドで働くことがその恩返しになるようにしていきたい。`,
+    textEnglish: `There was a coffee stand on the undecided stretch of Park Street in Shibuya, whether to go up or not. Its name was "Acid Coffee Tokyo," and despite its dubious name and anarchic appearance, the coffee it served was sublime. I frequented this shop and July 15th was one of those days.
+
+    While sipping coffee and chatting with the staff, a blond man with a black jacket and a hood from the station side approached and said, "Who are you? Interested in being a barista?" This brazen and self-assured man was none other than the owner of Acid Coffee Tokyo, Mr. Tsukada.
+    
+    I had long wanted to work as a coffee roaster somewhere, and this was the perfect opportunity for me. Of course, I answered with an immediate "I'll do it." We went on to cup some Guatemalan coffees, and he asked, "If you're serious, send in your resume." I sent in my resume the same day, had an interview, and that's how my life took a strange turn.
+    
+    Mr. Tsukada was funky, anarchic, and eccentric, but more than that, he was an elegant individual, in a nutshell, he was an interesting and captivating person. To be frank, I had become quite fond of this man. To the readers, let's keep this just between us, it's a matter of pride.
+    
+    I learned a lot about coffee and much more, and I owe him a great deal. I want to make my work at Acid Coffee a way to pay back that debt.`,
     tag: "NEW",
     imageFigures: [{ url: "", alt: "" }],
   },
@@ -150,8 +164,19 @@ export const Articles: ArticlesInterface = {
       url: "",
       alt: "",
     },
-    text: ``,
-    textEnglish: ``,
+    text: `機会があり、28年間の人生で初めて九州の地を踏んだ。別府や黒川温泉に行きながらガレリア御堂原というホテルに行き着く。九州というよりはこの建築を見に訪れたと言っても過言ではないところあり。DABURA.mという建築事務所が設計していて、かなり特徴的な建物、丘の上でブイブイ言わせている。エントランスやレストランまでの道のりは割とラビリンス感があり、個人的には興奮した。使い勝手に関してはわからない。部屋にも温泉があり、テラスからは別府の街と海が一望できる。
+    だいぶと豪勢な感じで、これもまたあまりやったことのないタイプのお金の使い方だが、年に数回はやってみてもいいかなという所感であった。ドミニクチェンさん的なコンテクストで言えば、リトリートというやつかもしれない。普段の生活から抜け出して、何か違うものに対面するという。これを機に、とりあえずは日本で気に入った建築のホテルに出かけるというのをやってみようと思った。
+    
+    その次の日は熊本、阿蘇への大移動。阿蘇山のテッペンまでは車で移動し、展望台のあるエリアに脚を運ぶ。展望台の向かい側には草原が広がっていた。そこには馬が放されていて、相当近くまで馬に近寄るというアグレッシブな体験もできた。まともに山に来たのは小学校低学年の時に富士山に行ったきりで、阿蘇の広大さが気持ちよかった。
+    
+    細々訪れた場所も心地よく、とてもよい九州旅になった。`,
+    textEnglish: `I had the opportunity to set foot in Kyushu for the first time in my 28 years of life. While I visited Beppu and Kurokawa Onsen, I ended up at a hotel called "Galleria Midobaru." It wouldn't be an overstatement to say that I visited more for the architecture than for Kyushu itself. It was designed by an architectural firm called DABURA.m and was quite a distinctive building, proudly situated on top of a hill. The path from the entrance to the restaurant had a somewhat labyrinthine quality, and personally, I was excited by it. As for its practicality, I'm not sure. The rooms also had hot springs, and from the terrace, you could enjoy a panoramic view of Beppu city and the sea.
+
+    It felt quite luxurious, and this was a type of spending I hadn't done much before. However, I felt that it might be worth trying a few times a year. In the context of someone like Dominic Chen, it might be considered a retreat - a way to step out of your everyday life and encounter something different. With this in mind, I thought I would try venturing to architecturally interesting hotels in Japan, at least for now.
+    
+    The next day was a significant journey to Kumamoto and Aso. We traveled by car to the peak of Mount Aso, and visited the area with an observatory. On the other side of the observatory, there was a vast grassy plain. Horses roamed freely, and I even had the chance for an aggressive experience of getting quite close to them. The last time I had visited a proper mountain was when I went to Mount Fuji in the early years of elementary school, so the vastness of Aso was refreshing.
+    
+    The places I visited along the way were enjoyable, and it turned out to be a very pleasant journey in Kyushu.`,
     tag: "LIFE",
     imageFigures: [{ url: "", alt: "" }],
   },
