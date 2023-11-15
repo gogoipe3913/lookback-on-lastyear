@@ -77,6 +77,15 @@ const lookBackItems: LookBackItemDataProps[] = [
     isLife: true,
     isEvent: false,
   },
+  {
+    title: "HISTORICAL SCIENCE",
+    month: "October",
+    slug: "historical-science",
+    url: "/images/firstVisitingToKumamoto.png",
+    alt: "HISTORICAL SCIENCEのサムネイル画像",
+    isLife: true,
+    isEvent: false,
+  },
 ];
 
 export { lookBackSortItems, lookBackItems, SORT_ITEM_NAME };

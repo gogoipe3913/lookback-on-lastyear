@@ -181,4 +181,29 @@ export const Articles: ArticlesInterface = {
     tag: "LIFE",
     imageFigures: [{ url: "", alt: "" }],
   },
+  [ARTICLE_TYPE.HISTORICAL_SCIENCE]: {
+    title: "HISTORICAL SCIENCE",
+    month: "October",
+    date: "2022.10.10",
+    mainImage: {
+      url: mainImage1,
+      alt: "記事1のメイン画像",
+    },
+    text: `10月になり、本を読んで歴史を勉強することが面白いと思うようになった。その大きなきっかけはCOTEN RADIO。COTEN RADIOは株式会社COTENという会社が配信しているポッドキャストで、それとは別のメディアでCEOの深井龍之介さんが話しているのを聞いて、「今まで知ってきたこととなんか違う」という印象を受けた。特定の歴史上の人物等の小さなことから国の成り立ちのような大きなものまでの歴史の話をしながらメタ認知のきっかけにしていくというコンセプトが興味深い。逆に今まで学校で勉強してきた歴史は、節と節、章と章の間に区切りがあって、なんとなく他人事の話をぶつ切りに聞かされている感があった。時代の間の話とか、テスト範囲の向こう側は無意味、みたいなことがあったように思う。天動説的な思い込みを持ってしまっていたのかもしれない。
+
+    その、「間」とか「向こう側」への知的好奇心から始まり、人間、道具、コミュニケーションを学んでいくと世界がひと続きになっていることの実感が出てきた。例えば歴史から始まって、哲学が発生して数学になったり、国が生まれて言語が発生したり、みたいな、学問だと思っていたものが様々歴史から始まってシームレスに繋がっているようにも見えて、他人事だったことが自分に繋がってることを実感した。見えてなかった枠を取り去った。
+    それ自体が自分にとってとても面白い気づきであった。なんとなく生きていくために理系学問ないしは情報工学を勉強したが、人文学/社会学とか、哲学や美術みたいなこれまで触れようと思ったことがない学問を学びたいと思った。
+    
+    ここまで来ると、社会構造的に選択させられていることが膨大にあることに気がつく。そこそこ勉強がわかりお金も稼げそうだから大学に行き企業に入って週5日は働いて…云々。もちろん楽しい時は楽しかったしそうやって出会ってきた友人たちも好きだが、社会に飲み込まれているという感覚もある。
+    完全に枠の外に出るのもどうかと思うが、上述の通り社会的な基準を持ちすぎてもいけない。歴史の勉強から入り、果ては思想と思想の線の上に居続けようという哲学に辿り着いたのであった。`,
+    textEnglish: `In October, I became interested in studying history by reading books. The major catalyst for this was COTEN RADIO, a podcast distributed by a company called COTEN. I heard CEO Ryunosuke Fukai speaking on a different media platform, and it left an impression of "something different from what I've known so far." The concept of using historical stories, ranging from small details about specific figures to the formation of nations, as a trigger for metacognition was intriguing. Conversely, the history I had studied in school seemed fragmented, with divisions between sections and chapters, making it feel like I was passively absorbing disjointed stories that were somewhat detached. There might have been a tendency to hold onto geocentric beliefs.
+
+    Starting from intellectual curiosity about the "gaps" or the "other side," as I delved into the study of human beings, tools, and communication, I began to sense the interconnectedness of the world. For example, starting from history, philosophy emerged and turned into mathematics, nations were born leading to the development of languages, and what I thought were separate fields of study appeared seamlessly connected through various historical threads. I realized that things I had considered unrelated were, in fact, connected to me. It was an intriguing revelation to remove the invisible boundaries.
+    
+    This realization itself was fascinating for me. Although I had studied scientific disciplines or information technology somewhat arbitrarily to live my life, I now wanted to explore academic disciplines such as humanities, sociology, philosophy, and art that I had never considered before.
+    
+    By this point, I became aware of the vast array of choices dictated by social structures. Going to university, joining a company, working five days a week, and so on, seemed like a plausible path because it involved understanding and earning money. Of course, there were enjoyable moments, and I liked the friends I had met along the way, but there was also a sense of being swallowed up by society. While I didn't necessarily want to completely break free from societal norms, I also didn't want to adhere too strictly to social standards, as mentioned earlier. Starting from the study of history and eventually arriving at the philosophy of staying on the line between different ideologies, that became my chosen path.`,
+    tag: "LIFE",
+    imageFigures: [{ url: "", alt: "" }],
+  },
 };
