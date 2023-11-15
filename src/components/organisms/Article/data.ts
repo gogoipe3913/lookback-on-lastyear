@@ -10,6 +10,7 @@ export enum ARTICLE_TYPE {
   MIDORI = "midori",
   ACID_COFFEE_TOKYO = "acid-coffee-tokyo",
   FIRST_VISITING = "first-visiting",
+  HISTORICAL_SCIENCE = "historical-science",
 }
 
 type ImageInterface = {
@@ -66,8 +67,8 @@ export const Articles: ArticlesInterface = {
     month: "April",
     date: "2022.04.01",
     mainImage: {
-      url: "",
-      alt: "",
+      url: mainImage1,
+      alt: "記事1のメイン画像",
     },
     text: `4月になって、会社員歴も3年になった。会社員らしからぬ暮らしぶりに驚く者もいよう、私だってそうである。職種が変わり、デザインエンジニアという名誉ありそうな、一方で奴隷のような役回りになった。デザインもエンジニアリングもするポジションである。
     尊敬するtakramという会社の田川欣哉氏がデザインエンジニアという仕事を語る記事を読んだのを覚えている。多分10年前くらいの記事だったと思う。
@@ -86,8 +87,8 @@ export const Articles: ArticlesInterface = {
     month: "June",
     date: "2022.06.05",
     mainImage: {
-      url: "",
-      alt: "",
+      url: mainImage1,
+      alt: "記事1のメイン画像",
     },
     text: `1年半ほど続けたホテル暮らしは6月で幕とした。京都から離れるときは10年前の上京したてのような寂しさがあり、京都に対しては故郷のような気持ちが生まれていた。きっとまたいつか帰るであろう。友人たちとは離れるが、その心許なさはSNSのありがたみを心底思い知ることで幾らか解消した。
     久々に東京定住、憧れた谷尻建築の賃貸を借りて自分だけしか居ない家での生活が始まった。三軒茶屋という東京の中でもかなりの未体験ゾーンは、新生活には相応しい期待感を演出してくれたのであった。朝から晩まで通して誰にも会わないという生活に、もの哀しさと新鮮味を感じつつ本を読む、デザインツールを弄る、プログラムを書く等、一人でないと到達しないであろう集中の時間を、とにかく量産した。そのうち一人が寂しくなる気もしていたが、孤独の時間を守ることは現代では輪をかけて難しいので、このあと数ヶ月はこの心地よい時間をひっそり過ごした。
@@ -106,8 +107,8 @@ export const Articles: ArticlesInterface = {
     month: "June",
     date: "2022.06.22",
     mainImage: {
-      url: "",
-      alt: "",
+      url: mainImage1,
+      alt: "記事1のメイン画像",
     },
     text: `京都で出会った男「硲 真人」は、先の京都生活を語る上で欠かせない男である。そもそもの出会いには全くコンテクストはなく偶然の巡り合わせだったが、おそらく人生レベルの関わりになるであろう気の合い方だった。大学を数ヶ月で辞めコーヒーを生業にし、ドラムを叩き、さまざまなものを蒸留し、自由に生きている。
     その彼の実家は福井にあり、watotoという名前の古民家カフェである。ということを、旅の音という北白川にある珈琲焙煎所で出会った梶本良司という男から聞いた。真人くんの父である。苗字は違うが。
@@ -134,8 +135,8 @@ export const Articles: ArticlesInterface = {
     month: "July",
     date: "2022.07.15",
     mainImage: {
-      url: "",
-      alt: "",
+      url: mainImage1,
+      alt: "記事1のメイン画像",
     },
     text: `渋谷の公園通りを上るか上がらないかの煮え切らない辺りにコーヒースタンドがあった。名をアシッドコーヒートウキョウと言い、その怪しげな名前とアナーキーな様子とは裏腹に、出てくるコーヒーは至高であった。自分は足繁くこの店に通い、7月15日もそのうちの一日であった。
     スタッフと話しながらコーヒーを飲んでいると、駅方面から黒い上着にフードを被った金髪オールバックの男が歩いてきて、「君誰？バリスタやんない？」と言った。この傍若無人かつ唯我独尊味に溢れた男こそアシッドコーヒートウキョウのオーナー、Mr.塚田である。
@@ -161,8 +162,8 @@ export const Articles: ArticlesInterface = {
     month: "September",
     date: "2022.09.13",
     mainImage: {
-      url: "",
-      alt: "",
+      url: mainImage1,
+      alt: "記事1のメイン画像",
     },
     text: `機会があり、28年間の人生で初めて九州の地を踏んだ。別府や黒川温泉に行きながらガレリア御堂原というホテルに行き着く。九州というよりはこの建築を見に訪れたと言っても過言ではないところあり。DABURA.mという建築事務所が設計していて、かなり特徴的な建物、丘の上でブイブイ言わせている。エントランスやレストランまでの道のりは割とラビリンス感があり、個人的には興奮した。使い勝手に関してはわからない。部屋にも温泉があり、テラスからは別府の街と海が一望できる。
     だいぶと豪勢な感じで、これもまたあまりやったことのないタイプのお金の使い方だが、年に数回はやってみてもいいかなという所感であった。ドミニクチェンさん的なコンテクストで言えば、リトリートというやつかもしれない。普段の生活から抜け出して、何か違うものに対面するという。これを機に、とりあえずは日本で気に入った建築のホテルに出かけるというのをやってみようと思った。
@@ -177,6 +178,31 @@ export const Articles: ArticlesInterface = {
     The next day was a significant journey to Kumamoto and Aso. We traveled by car to the peak of Mount Aso, and visited the area with an observatory. On the other side of the observatory, there was a vast grassy plain. Horses roamed freely, and I even had the chance for an aggressive experience of getting quite close to them. The last time I had visited a proper mountain was when I went to Mount Fuji in the early years of elementary school, so the vastness of Aso was refreshing.
     
     The places I visited along the way were enjoyable, and it turned out to be a very pleasant journey in Kyushu.`,
+    tag: "LIFE",
+    imageFigures: [{ url: "", alt: "" }],
+  },
+  [ARTICLE_TYPE.HISTORICAL_SCIENCE]: {
+    title: "HISTORICAL SCIENCE",
+    month: "October",
+    date: "2022.10.10",
+    mainImage: {
+      url: mainImage1,
+      alt: "記事1のメイン画像",
+    },
+    text: `10月になり、本を読んで歴史を勉強することが面白いと思うようになった。その大きなきっかけはCOTEN RADIO。COTEN RADIOは株式会社COTENという会社が配信しているポッドキャストで、それとは別のメディアでCEOの深井龍之介さんが話しているのを聞いて、「今まで知ってきたこととなんか違う」という印象を受けた。特定の歴史上の人物等の小さなことから国の成り立ちのような大きなものまでの歴史の話をしながらメタ認知のきっかけにしていくというコンセプトが興味深い。逆に今まで学校で勉強してきた歴史は、節と節、章と章の間に区切りがあって、なんとなく他人事の話をぶつ切りに聞かされている感があった。時代の間の話とか、テスト範囲の向こう側は無意味、みたいなことがあったように思う。天動説的な思い込みを持ってしまっていたのかもしれない。
+
+    その、「間」とか「向こう側」への知的好奇心から始まり、人間、道具、コミュニケーションを学んでいくと世界がひと続きになっていることの実感が出てきた。例えば歴史から始まって、哲学が発生して数学になったり、国が生まれて言語が発生したり、みたいな、学問だと思っていたものが様々歴史から始まってシームレスに繋がっているようにも見えて、他人事だったことが自分に繋がってることを実感した。見えてなかった枠を取り去った。
+    それ自体が自分にとってとても面白い気づきであった。なんとなく生きていくために理系学問ないしは情報工学を勉強したが、人文学/社会学とか、哲学や美術みたいなこれまで触れようと思ったことがない学問を学びたいと思った。
+    
+    ここまで来ると、社会構造的に選択させられていることが膨大にあることに気がつく。そこそこ勉強がわかりお金も稼げそうだから大学に行き企業に入って週5日は働いて…云々。もちろん楽しい時は楽しかったしそうやって出会ってきた友人たちも好きだが、社会に飲み込まれているという感覚もある。
+    完全に枠の外に出るのもどうかと思うが、上述の通り社会的な基準を持ちすぎてもいけない。歴史の勉強から入り、果ては思想と思想の線の上に居続けようという哲学に辿り着いたのであった。`,
+    textEnglish: `In October, I became interested in studying history by reading books. The major catalyst for this was COTEN RADIO, a podcast distributed by a company called COTEN. I heard CEO Ryunosuke Fukai speaking on a different media platform, and it left an impression of "something different from what I've known so far." The concept of using historical stories, ranging from small details about specific figures to the formation of nations, as a trigger for metacognition was intriguing. Conversely, the history I had studied in school seemed fragmented, with divisions between sections and chapters, making it feel like I was passively absorbing disjointed stories that were somewhat detached. There might have been a tendency to hold onto geocentric beliefs.
+
+    Starting from intellectual curiosity about the "gaps" or the "other side," as I delved into the study of human beings, tools, and communication, I began to sense the interconnectedness of the world. For example, starting from history, philosophy emerged and turned into mathematics, nations were born leading to the development of languages, and what I thought were separate fields of study appeared seamlessly connected through various historical threads. I realized that things I had considered unrelated were, in fact, connected to me. It was an intriguing revelation to remove the invisible boundaries.
+    
+    This realization itself was fascinating for me. Although I had studied scientific disciplines or information technology somewhat arbitrarily to live my life, I now wanted to explore academic disciplines such as humanities, sociology, philosophy, and art that I had never considered before.
+    
+    By this point, I became aware of the vast array of choices dictated by social structures. Going to university, joining a company, working five days a week, and so on, seemed like a plausible path because it involved understanding and earning money. Of course, there were enjoyable moments, and I liked the friends I had met along the way, but there was also a sense of being swallowed up by society. While I didn't necessarily want to completely break free from societal norms, I also didn't want to adhere too strictly to social standards, as mentioned earlier. Starting from the study of history and eventually arriving at the philosophy of staying on the line between different ideologies, that became my chosen path.`,
     tag: "LIFE",
     imageFigures: [{ url: "", alt: "" }],
   },

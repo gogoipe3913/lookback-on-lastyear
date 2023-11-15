@@ -85,6 +85,14 @@ const Templates: React.FC = () => {
               </MainLayout>
             }
           />
+          <Route
+            path={`/${ARTICLE_TYPE.HISTORICAL_SCIENCE}`}
+            element={
+              <MainLayout>
+                <Article articleType={ARTICLE_TYPE.HISTORICAL_SCIENCE} />
+              </MainLayout>
+            }
+          />
         </Routes>
       </AnimatePresence>
     </>
