@@ -86,6 +86,15 @@ const lookBackItems: LookBackItemDataProps[] = [
     isLife: true,
     isEvent: false,
   },
+  {
+    title: "LOOK BACK SUMMARY",
+    month: "December",
+    slug: "look-back-summary",
+    url: "/images/firstVisitingToKumamoto.png",
+    alt: "LOOK BACK SUMMARYのサムネイル画像",
+    isLife: true,
+    isEvent: false,
+  },
 ];
 
 export { lookBackSortItems, lookBackItems, SORT_ITEM_NAME };
