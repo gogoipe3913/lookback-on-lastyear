@@ -43,7 +43,7 @@ const lookBackItems: LookBackItemDataProps[] = [
   },
   {
     title: "NEW LIFE IN TOKYO",
-    month: "August",
+    month: "June",
     slug: "June",
     url: "/images/newLife.png",
     alt: "NEW LIFE IN TOKYOのサムネイル画像",
@@ -61,7 +61,7 @@ const lookBackItems: LookBackItemDataProps[] = [
   },
   {
     title: "ACID COFFEE TOKYO",
-    month: "September",
+    month: "July",
     slug: "acid-coffee-tokyo",
     url: "/images/barista.png",
     alt: "ACID COFFEE TOKYOのサムネイル画像",
@@ -70,7 +70,7 @@ const lookBackItems: LookBackItemDataProps[] = [
   },
   {
     title: "FIRST VISITING TO KYUSHU",
-    month: "December",
+    month: "September",
     slug: "first-visiting",
     url: "/images/firstVisitingToKumamoto.png",
     alt: "FIRST VISITING TO KYUSHUのサムネイル画像",
