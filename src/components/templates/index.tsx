@@ -93,6 +93,14 @@ const Templates: React.FC = () => {
               </MainLayout>
             }
           />
+          <Route
+            path={`/${ARTICLE_TYPE.LOOK_BACK_SUMMARY}`}
+            element={
+              <MainLayout>
+                <Article articleType={ARTICLE_TYPE.HISTORICAL_SCIENCE} />
+              </MainLayout>
+            }
+          />
         </Routes>
       </AnimatePresence>
     </>

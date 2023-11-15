@@ -11,6 +11,7 @@ export enum ARTICLE_TYPE {
   ACID_COFFEE_TOKYO = "acid-coffee-tokyo",
   FIRST_VISITING = "first-visiting",
   HISTORICAL_SCIENCE = "historical-science",
+  LOOK_BACK_SUMMARY = "look-back-summary",
 }
 
 type ImageInterface = {
@@ -203,6 +204,30 @@ export const Articles: ArticlesInterface = {
     This realization itself was fascinating for me. Although I had studied scientific disciplines or information technology somewhat arbitrarily to live my life, I now wanted to explore academic disciplines such as humanities, sociology, philosophy, and art that I had never considered before.
     
     By this point, I became aware of the vast array of choices dictated by social structures. Going to university, joining a company, working five days a week, and so on, seemed like a plausible path because it involved understanding and earning money. Of course, there were enjoyable moments, and I liked the friends I had met along the way, but there was also a sense of being swallowed up by society. While I didn't necessarily want to completely break free from societal norms, I also didn't want to adhere too strictly to social standards, as mentioned earlier. Starting from the study of history and eventually arriving at the philosophy of staying on the line between different ideologies, that became my chosen path.`,
+    tag: "LIFE",
+    imageFigures: [{ url: "", alt: "" }],
+  },
+  [ARTICLE_TYPE.LOOK_BACK_SUMMARY]: {
+    title: "LOOK BACK SUMMARY",
+    month: "December",
+    date: "2022.12.31",
+    mainImage: {
+      url: mainImage1,
+      alt: "記事1のメイン画像",
+    },
+    text: `約1.5年に渡ったホテル暮らしをやめて東京に暮らし始めたことが、大きな2022年のトピックだった。この1.5年で考えなかったことを考え、孤独の時間が確保でき、本を読んだり勉強したりの時間が増えた。人といる時間も嫌いではないが、孤独の時間を寂しいと思えるのは孤独の時間が確保されているからだとわかった。
+    もちろん、ホテル暮らしをしていても東京に戻ってきても、人との出会いは様々、みんなとても面白い人であり、そこは本当に尊い。バランスを考えながら生活できる環境になったので、現状ではもう少しひとりの時間を増やせるようにしていけるとよいなと感じている。
+    
+    もう一つ、ロースターでバリスタをやるという野望が達成できた。これも自分の中ではかなり大きな出来事で、コーヒー好きな人である時には知らなかったことを様々知ることができた。友人や知り合いとコーヒーを飲みながらその良さを話すという根本スタイルは変わらないが、接客/マーケティングのような、自分が関わってこなかった業種の仕事を前のめりにやってみるのも面白い。
+    
+    再スタートのような1年として受け取ると、申し分ないのではないだろうか。振り返りはここで終わりにして、来年をどんな年にするのか考えていこう。`,
+    textEnglish: `One of the significant topics of 2022 was the decision to end my approximately 1.5-year hotel lifestyle and start living in Tokyo. During this 1.5 years, I pondered on things I hadn't considered before, secured moments of solitude, and increased the time for reading and studying. While I don't dislike time spent with others, I realized that feeling lonely during moments of solitude is possible because those moments are intentionally carved out.
+
+    Certainly, whether living in hotels or back in Tokyo, encounters with people were diverse, and everyone I met was genuinely interesting. That aspect is truly precious. Given the ability to balance my life, I now feel that I can afford a bit more time alone.
+    
+    Another achievement was fulfilling the ambition of working as a barista in a coffee roastery. This was a significant event for me, allowing me to learn various things I didn't know when I was just a coffee enthusiast. While the fundamental style of enjoying coffee with friends and acquaintances remains unchanged, delving into professions like customer service and marketing, which I hadn't been involved in before, proved to be interesting.
+    
+    Considering this year as a kind of restart, it seems quite satisfactory. Let's conclude the reflection here and think about what kind of year we want to make the coming one.`,
     tag: "LIFE",
     imageFigures: [{ url: "", alt: "" }],
   },
