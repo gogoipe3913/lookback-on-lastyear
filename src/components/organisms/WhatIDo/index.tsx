@@ -176,7 +176,7 @@ const WhatIDo: React.FC<WhatIDoProps> = ({ className = "" }) => {
           </span>
           <span className={style.WhatIDo__numbers}>{`0${
             currentSlideNumber + 1
-          } / 06`}</span>
+          } / 0${slideContents.length}`}</span>
         </p>
       </FadeInContainer>
       <FadeInContainer>
