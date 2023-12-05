@@ -97,7 +97,7 @@ const Templates: React.FC = () => {
             path={`/${ARTICLE_TYPE.LOOK_BACK_SUMMARY}`}
             element={
               <MainLayout>
-                <Article articleType={ARTICLE_TYPE.HISTORICAL_SCIENCE} />
+                <Article articleType={ARTICLE_TYPE.LOOK_BACK_SUMMARY} />
               </MainLayout>
             }
           />
