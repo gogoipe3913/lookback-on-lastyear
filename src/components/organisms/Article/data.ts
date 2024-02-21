@@ -1,7 +1,49 @@
-import mainImage1 from "/images/articles/1/test_article_main.png";
-import imageFigure1 from "/images/articles/1/imageFigures/imageFigure_1.png";
-import imageFigure2 from "/images/articles/1/imageFigures/imageFigure2.png";
-import imageFigure3 from "/images/articles/1/imageFigures/imageFigure3.png";
+// KYOTO LIFE
+import mainImage1 from "/images/articles/01_kyoto_life/test_article_main.png";
+import imageFigure1_1 from "/images/articles/01_kyoto_life/imageFigures/imageFigure1.jpg";
+import imageFigure1_2 from "/images/articles/01_kyoto_life/imageFigures/imageFigure2.png";
+import imageFigure1_3 from "/images/articles/01_kyoto_life/imageFigures/imageFigure3.png";
+import imageFigure1_4 from "/images/articles/01_kyoto_life/imageFigures/imageFigure4.png";
+import imageFigure1_5 from "/images/articles/01_kyoto_life/imageFigures/imageFigure5.png";
+// DESIGN ENGINEER
+import mainImage2 from "/images/articles/02_design_engineer/test_article_main.png";
+import imageFigure2_1 from "/images/articles/02_design_engineer/imageFigures/imageFigure_1.png";
+import imageFigure2_2 from "/images/articles/02_design_engineer/imageFigures/imageFigure2.png";
+import imageFigure2_3 from "/images/articles/02_design_engineer/imageFigures/imageFigure3.png";
+// NEW LIFE
+import mainImage3 from "/images/articles/03_new_life_tokyo/test_article_main.png";
+import imageFigure3_1 from "/images/articles/03_new_life_tokyo/imageFigures/imageFigure_1.png";
+import imageFigure3_2 from "/images/articles/03_new_life_tokyo/imageFigures/imageFigure2.png";
+import imageFigure3_3 from "/images/articles/03_new_life_tokyo/imageFigures/imageFigure3.png";
+import imageFigure3_4 from "/images/articles/03_new_life_tokyo/imageFigures/imageFigure4.jpg";
+// MIDORI
+import mainImage4 from "/images/articles/04_midori/test_article_main.png";
+import imageFigure4_1 from "/images/articles/04_midori/imageFigures/imageFigure1.png";
+import imageFigure4_2 from "/images/articles/04_midori/imageFigures/imageFigure2.png";
+import imageFigure4_3 from "/images/articles/04_midori/imageFigures/imageFigure3.png";
+import imageFigure4_4 from "/images/articles/04_midori/imageFigures/imageFigure4.png";
+// ACID COFFEE TOKYO
+import mainImage5 from "/images/articles/05_acid/test_article_main.png";
+import imageFigure5_1 from "/images/articles/05_acid/imageFigures/imageFigure_1.png";
+import imageFigure5_2 from "/images/articles/05_acid/imageFigures/imageFigure2.png";
+import imageFigure5_3 from "/images/articles/05_acid/imageFigures/imageFigure3.png";
+// FIRST VISITING
+import mainImage6 from "/images/articles/06_kumamoto/test_article_main.png";
+import imageFigure6_1 from "/images/articles/06_kumamoto/imageFigures/imageFigure1.png";
+import imageFigure6_2 from "/images/articles/06_kumamoto/imageFigures/imageFigure2.png";
+import imageFigure6_3 from "/images/articles/06_kumamoto/imageFigures/imageFigure3.png";
+import imageFigure6_4 from "/images/articles/06_kumamoto/imageFigures/imageFigure4.png";
+// HISTORICAL SCIENCE
+import mainImage7 from "/images/articles/07_history/test_article_main.png";
+import imageFigure7_1 from "/images/articles/07_history/imageFigures/imageFigure1.jpg";
+import imageFigure7_2 from "/images/articles/07_history/imageFigures/imageFigure2.jpg";
+import imageFigure7_3 from "/images/articles/07_history/imageFigures/imageFigure3.jpeg";
+
+// LOOK BACK SUMMARY
+import mainImage8 from "/images/articles/08_summary/test_article_main.png";
+import imageFigure8_1 from "/images/articles/08_summary/imageFigures/imageFigure_1.png";
+import imageFigure8_2 from "/images/articles/08_summary/imageFigures/imageFigure2.png";
+import imageFigure8_3 from "/images/articles/08_summary/imageFigures/imageFigure3.png";
 
 export enum ARTICLE_TYPE {
   KYOTO_LIFE = "kyoto-life",
@@ -58,9 +100,11 @@ export const Articles: ArticlesInterface = {
       The most significant shift in my perspective was the realization that it would be a good idea to settle somewhere in Kyoto, not just as a transient. This probably stems from the fact that the people I met in Kyoto warmly welcomed me. I'm sure that if I ever decide to leave the hotel lifestyle in the future, when I visit Kyoto, it will feel like returning rather than just going there.`,
     tag: "LIFE",
     imageFigures: [
-      { url: imageFigure1, alt: "" },
-      { url: imageFigure2, alt: "" },
-      { url: imageFigure3, alt: "" },
+      { url: imageFigure1_1, alt: "" },
+      { url: imageFigure1_2, alt: "" },
+      { url: imageFigure1_3, alt: "" },
+      { url: imageFigure1_4, alt: "" },
+      { url: imageFigure1_5, alt: "" },
     ],
   },
   [ARTICLE_TYPE.DESIGN_ENGINEER]: {
@@ -68,7 +112,7 @@ export const Articles: ArticlesInterface = {
     month: "April",
     date: "2022.04.01",
     mainImage: {
-      url: mainImage1,
+      url: mainImage2,
       alt: "記事1のメイン画像",
     },
     text: `4月になって、会社員歴も3年になった。会社員らしからぬ暮らしぶりに驚く者もいよう、私だってそうである。職種が変わり、デザインエンジニアという名誉ありそうな、一方で奴隷のような役回りになった。デザインもエンジニアリングもするポジションである。
@@ -81,14 +125,18 @@ export const Articles: ArticlesInterface = {
       
       In my personal business, which I started in 2021, I've been able to engage in various design and creative projects. I hope to live a life where I can seamlessly integrate my work and personal life, leveraging the experiences from one side to enhance the other. Ideally, my experiences in the corporate world should benefit my personal ventures, and my external experiences should enrich my corporate role. In practice, it's been a bit chaotic, trying to juggle both sides.`,
     tag: "NEW",
-    imageFigures: [{ url: "", alt: "" }],
+    imageFigures: [
+      { url: imageFigure2_1, alt: "" },
+      { url: imageFigure2_2, alt: "" },
+      { url: imageFigure2_3, alt: "" },
+    ],
   },
   [ARTICLE_TYPE.NEW_LIFE]: {
     title: "NEW LIFE IN TOKYO",
     month: "June",
     date: "2022.06.05",
     mainImage: {
-      url: mainImage1,
+      url: mainImage3,
       alt: "記事1のメイン画像",
     },
     text: `1年半ほど続けたホテル暮らしは6月で幕とした。京都から離れるときは10年前の上京したてのような寂しさがあり、京都に対しては故郷のような気持ちが生まれていた。きっとまたいつか帰るであろう。友人たちとは離れるが、その心許なさはSNSのありがたみを心底思い知ることで幾らか解消した。
@@ -101,14 +149,19 @@ export const Articles: ArticlesInterface = {
       
       Since it's my own space, I had to furnish it myself. Surprisingly, this turned out to be quite interesting. I explored minimalistic product designs and came across a low table from a company called GUBI, called "Pedrera." Its seamless leg base and organic-shaped glass tabletop captivated me with its minimalistic modern design. I've casually observed product design in the past, but delving deeper into it, I have a hunch that there might be a vast world to explore, making life even more interesting.`,
     tag: "LIFE",
-    imageFigures: [{ url: "", alt: "" }],
+    imageFigures: [
+      { url: imageFigure3_1, alt: "" },
+      { url: imageFigure3_2, alt: "" },
+      { url: imageFigure3_3, alt: "" },
+      { url: imageFigure3_4, alt: "" },
+    ],
   },
   [ARTICLE_TYPE.MIDORI]: {
     title: "MIDORI WO WATARU OTO",
     month: "June",
     date: "2022.06.22",
     mainImage: {
-      url: mainImage1,
+      url: mainImage4,
       alt: "記事1のメイン画像",
     },
     text: `京都で出会った男「硲 真人」は、先の京都生活を語る上で欠かせない男である。そもそもの出会いには全くコンテクストはなく偶然の巡り合わせだったが、おそらく人生レベルの関わりになるであろう気の合い方だった。大学を数ヶ月で辞めコーヒーを生業にし、ドラムを叩き、さまざまなものを蒸留し、自由に生きている。
@@ -129,14 +182,19 @@ export const Articles: ArticlesInterface = {
     
     From a chance encounter to Watoto, and even to Gen Tanabe, my life was filled with unexpected connections that far exceeded my imagination. Sometimes, accepting opportunities with an open heart can lead to important moments in life. Indeed, interesting things can also be good things.`,
     tag: "EVENT",
-    imageFigures: [{ url: "", alt: "" }],
+    imageFigures: [
+      { url: imageFigure4_1, alt: "" },
+      { url: imageFigure4_2, alt: "" },
+      { url: imageFigure4_3, alt: "" },
+      { url: imageFigure4_4, alt: "" },
+    ],
   },
   [ARTICLE_TYPE.ACID_COFFEE_TOKYO]: {
     title: "ACID COFFEE TOKYO",
     month: "July",
     date: "2022.07.15",
     mainImage: {
-      url: mainImage1,
+      url: mainImage5,
       alt: "記事1のメイン画像",
     },
     text: `渋谷の公園通りを上るか上がらないかの煮え切らない辺りにコーヒースタンドがあった。名をアシッドコーヒートウキョウと言い、その怪しげな名前とアナーキーな様子とは裏腹に、出てくるコーヒーは至高であった。自分は足繁くこの店に通い、7月15日もそのうちの一日であった。
@@ -156,14 +214,18 @@ export const Articles: ArticlesInterface = {
     
     I learned a lot about coffee and much more, and I owe him a great deal. I want to make my work at Acid Coffee a way to pay back that debt.`,
     tag: "NEW",
-    imageFigures: [{ url: "", alt: "" }],
+    imageFigures: [
+      { url: imageFigure5_1, alt: "" },
+      { url: imageFigure5_2, alt: "" },
+      { url: imageFigure5_3, alt: "" },
+    ],
   },
   [ARTICLE_TYPE.FIRST_VISITING]: {
     title: "FIRST VISITING TO KYUSHU",
     month: "September",
     date: "2022.09.13",
     mainImage: {
-      url: mainImage1,
+      url: mainImage6,
       alt: "記事1のメイン画像",
     },
     text: `機会があり、28年間の人生で初めて九州の地を踏んだ。別府や黒川温泉に行きながらガレリア御堂原というホテルに行き着く。九州というよりはこの建築を見に訪れたと言っても過言ではないところあり。DABURA.mという建築事務所が設計していて、かなり特徴的な建物、丘の上でブイブイ言わせている。エントランスやレストランまでの道のりは割とラビリンス感があり、個人的には興奮した。使い勝手に関してはわからない。部屋にも温泉があり、テラスからは別府の街と海が一望できる。
@@ -180,14 +242,19 @@ export const Articles: ArticlesInterface = {
     
     The places I visited along the way were enjoyable, and it turned out to be a very pleasant journey in Kyushu.`,
     tag: "LIFE",
-    imageFigures: [{ url: "", alt: "" }],
+    imageFigures: [
+      { url: imageFigure6_1, alt: "" },
+      { url: imageFigure6_2, alt: "" },
+      { url: imageFigure6_3, alt: "" },
+      { url: imageFigure6_4, alt: "" },
+    ],
   },
   [ARTICLE_TYPE.HISTORICAL_SCIENCE]: {
     title: "HISTORICAL SCIENCE",
     month: "October",
     date: "2022.10.10",
     mainImage: {
-      url: mainImage1,
+      url: mainImage7,
       alt: "記事1のメイン画像",
     },
     text: `10月になり、本を読んで歴史を勉強することが面白いと思うようになった。その大きなきっかけはCOTEN RADIO。COTEN RADIOは株式会社COTENという会社が配信しているポッドキャストで、それとは別のメディアでCEOの深井龍之介さんが話しているのを聞いて、「今まで知ってきたこととなんか違う」という印象を受けた。特定の歴史上の人物等の小さなことから国の成り立ちのような大きなものまでの歴史の話をしながらメタ認知のきっかけにしていくというコンセプトが興味深い。逆に今まで学校で勉強してきた歴史は、節と節、章と章の間に区切りがあって、なんとなく他人事の話をぶつ切りに聞かされている感があった。時代の間の話とか、テスト範囲の向こう側は無意味、みたいなことがあったように思う。天動説的な思い込みを持ってしまっていたのかもしれない。
@@ -205,14 +272,18 @@ export const Articles: ArticlesInterface = {
     
     By this point, I became aware of the vast array of choices dictated by social structures. Going to university, joining a company, working five days a week, and so on, seemed like a plausible path because it involved understanding and earning money. Of course, there were enjoyable moments, and I liked the friends I had met along the way, but there was also a sense of being swallowed up by society. While I didn't necessarily want to completely break free from societal norms, I also didn't want to adhere too strictly to social standards, as mentioned earlier. Starting from the study of history and eventually arriving at the philosophy of staying on the line between different ideologies, that became my chosen path.`,
     tag: "LIFE",
-    imageFigures: [{ url: "", alt: "" }],
+    imageFigures: [
+      { url: imageFigure7_1, alt: "" },
+      { url: imageFigure7_2, alt: "" },
+      { url: imageFigure7_3, alt: "" },
+    ],
   },
   [ARTICLE_TYPE.LOOK_BACK_SUMMARY]: {
     title: "LOOK BACK SUMMARY",
     month: "December",
     date: "2022.12.31",
     mainImage: {
-      url: mainImage1,
+      url: mainImage8,
       alt: "記事1のメイン画像",
     },
     text: `約1.5年に渡ったホテル暮らしをやめて東京に暮らし始めたことが、大きな2022年のトピックだった。この1.5年で考えなかったことを考え、孤独の時間が確保でき、本を読んだり勉強したりの時間が増えた。人といる時間も嫌いではないが、孤独の時間を寂しいと思えるのは孤独の時間が確保されているからだとわかった。
@@ -229,6 +300,10 @@ export const Articles: ArticlesInterface = {
     
     Considering this year as a kind of restart, it seems quite satisfactory. Let's conclude the reflection here and think about what kind of year we want to make the coming one.`,
     tag: "LIFE",
-    imageFigures: [{ url: "", alt: "" }],
+    imageFigures: [
+      { url: imageFigure8_1, alt: "" },
+      { url: imageFigure8_2, alt: "" },
+      { url: imageFigure8_3, alt: "" },
+    ],
   },
 };
