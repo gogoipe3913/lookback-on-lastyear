@@ -42,7 +42,7 @@ import imageFigure7_2 from "/images/articles/07_history/imageFigures/imageFigure
 import imageFigure7_3 from "/images/articles/07_history/imageFigures/imageFigure3.jpeg";
 // LOOK BACK SUMMARY
 import mainImage8 from "/images/articles/08_summary/test_article_main.png";
-import imageFigure8_1 from "/images/articles/08_summary/imageFigures/imageFigure_1.png";
+import imageFigure8_1 from "/images/articles/08_summary/imageFigures/imageFigure1.png";
 import imageFigure8_2 from "/images/articles/08_summary/imageFigures/imageFigure2.png";
 import imageFigure8_3 from "/images/articles/08_summary/imageFigures/imageFigure3.png";
 
