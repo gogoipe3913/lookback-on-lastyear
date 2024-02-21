@@ -44,7 +44,7 @@ const lookBackItems: LookBackItemDataProps[] = [
   {
     title: "NEW LIFE IN TOKYO",
     month: "June",
-    slug: "June",
+    slug: "new-life",
     url: "/images/newLifeTokyo.png",
     alt: "NEW LIFE IN TOKYOのサムネイル画像",
     isLife: true,
