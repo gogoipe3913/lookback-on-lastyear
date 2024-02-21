@@ -4,7 +4,7 @@
 .Menu {
   $timing-function-text: cubic-bezier(0.86, 0, 0.79, 0);
 
-  .Menu__humbergerButton {
+  .Menu__hamburgerButton {
     position: fixed;
     top: 48px;
     left: 100px;
@@ -13,13 +13,13 @@
 
     @media (hover: hover) {
       &:hover {
-        .Menu__humbergerButtonLine--top {
+        .Menu__hamburgerButtonLine--top {
           width: 16px;
         }
-        .Menu__humbergerButtonLine--center {
+        .Menu__hamburgerButtonLine--center {
           width: 20px;
         }
-        .Menu__humbergerButtonLine--bottom {
+        .Menu__hamburgerButtonLine--bottom {
           width: 28px;
         }
       }
@@ -32,19 +32,19 @@
     @include respondToSm {
       left: 36px;
 
-      .Menu__humbergerButtonLine--top {
+      .Menu__hamburgerButtonLine--top {
         width: 16px;
       }
-      .Menu__humbergerButtonLine--center {
+      .Menu__hamburgerButtonLine--center {
         width: 20px;
       }
-      .Menu__humbergerButtonLine--bottom {
+      .Menu__hamburgerButtonLine--bottom {
         width: 28px;
       }
     }
   }
 
-  .Menu__humbergerButtonLine {
+  .Menu__hamburgerButtonLine {
     display: block;
     width: 40px;
     height: 1px;
@@ -73,7 +73,7 @@
     }
   }
 
-  .Menu__humbergerButtonLine + .Menu__humbergerButtonLine {
+  .Menu__hamburgerButtonLine + .Menu__hamburgerButtonLine {
     margin-top: 9px;
   }
 
@@ -102,6 +102,21 @@
         width: 80%;
       }
     }
+  }
+
+  .Menu__contentsListWrapper {
+    opacity: 0;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  // for CSSTransition
+  .Menu__contentsListWrapper--entered {
+    opacity: 1;
+  }
+
+  .Menu__contentsListWrapper--exited {
+    opacity: 0;
   }
 
   .Menu__contentsList {
