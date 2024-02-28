@@ -1,47 +1,50 @@
 // KYOTO LIFE
-import mainImage1 from "/images/articles/01_kyoto_life/test_article_main.png";
+import mainImage1 from "/images/articles/01_kyoto_life/articleMain.jpg";
 import imageFigure1_1 from "/images/articles/01_kyoto_life/imageFigures/imageFigure1.jpg";
-import imageFigure1_2 from "/images/articles/01_kyoto_life/imageFigures/imageFigure2.png";
+import imageFigure1_2 from "/images/articles/01_kyoto_life/imageFigures/imageFigure2.jpg";
 import imageFigure1_3 from "/images/articles/01_kyoto_life/imageFigures/imageFigure3.png";
-import imageFigure1_4 from "/images/articles/01_kyoto_life/imageFigures/imageFigure4.png";
-import imageFigure1_5 from "/images/articles/01_kyoto_life/imageFigures/imageFigure5.png";
+import imageFigure1_4 from "/images/articles/01_kyoto_life/imageFigures/imageFigure4.jpg";
+import imageFigure1_5 from "/images/articles/01_kyoto_life/imageFigures/imageFigure5.jpg";
+import imageFigure1_6 from "/images/articles/01_kyoto_life/imageFigures/imageFigure6.jpg";
 // DESIGN ENGINEER
-import mainImage2 from "/images/articles/02_design_engineer/test_article_main.png";
+import mainImage2 from "/images/articles/02_design_engineer/articleMain.jpg";
 import imageFigure2_1 from "/images/articles/02_design_engineer/imageFigures/imageFigure1.png";
 import imageFigure2_2 from "/images/articles/02_design_engineer/imageFigures/imageFigure2.png";
 import imageFigure2_3 from "/images/articles/02_design_engineer/imageFigures/imageFigure3.png";
 import imageFigure2_4 from "/images/articles/02_design_engineer/imageFigures/imageFigure4.png";
+import imageFigure2_5 from "/images/articles/02_design_engineer/imageFigures/imageFigure5.jpg";
 // NEW LIFE
-import mainImage3 from "/images/articles/03_new_life_tokyo/test_article_main.png";
+import mainImage3 from "/images/articles/03_new_life_tokyo/articleMain.png";
 import imageFigure3_1 from "/images/articles/03_new_life_tokyo/imageFigures/imageFigure_1.png";
 import imageFigure3_2 from "/images/articles/03_new_life_tokyo/imageFigures/imageFigure2.jpg";
 import imageFigure3_3 from "/images/articles/03_new_life_tokyo/imageFigures/imageFigure3.png";
 import imageFigure3_4 from "/images/articles/03_new_life_tokyo/imageFigures/imageFigure4.jpg";
 // MIDORI
-import mainImage4 from "/images/articles/04_midori/test_article_main.png";
+import mainImage4 from "/images/articles/04_midori/articleMain.png";
 import imageFigure4_1 from "/images/articles/04_midori/imageFigures/imageFigure1.png";
 import imageFigure4_2 from "/images/articles/04_midori/imageFigures/imageFigure2.png";
-import imageFigure4_3 from "/images/articles/04_midori/imageFigures/imageFigure3.png";
+import imageFigure4_3 from "/images/articles/04_midori/imageFigures/imageFigure3.jpg";
 import imageFigure4_4 from "/images/articles/04_midori/imageFigures/imageFigure4.png";
+import imageFigure4_5 from "/images/articles/04_midori/imageFigures/imageFigure5.jpg";
 // ACID COFFEE TOKYO
-import mainImage5 from "/images/articles/05_acid/test_article_main.png";
+import mainImage5 from "/images/articles/05_acid/articleMain.png";
 import imageFigure5_1 from "/images/articles/05_acid/imageFigures/imageFigure1.jpg";
 import imageFigure5_2 from "/images/articles/05_acid/imageFigures/imageFigure2.jpg";
 import imageFigure5_3 from "/images/articles/05_acid/imageFigures/imageFigure3.png";
 import imageFigure5_4 from "/images/articles/05_acid/imageFigures/imageFigure4.png";
 // FIRST VISITING
-import mainImage6 from "/images/articles/06_kumamoto/test_article_main.png";
+import mainImage6 from "/images/articles/06_kumamoto/articleMain.jpg";
 import imageFigure6_1 from "/images/articles/06_kumamoto/imageFigures/imageFigure1.png";
 import imageFigure6_2 from "/images/articles/06_kumamoto/imageFigures/imageFigure2.png";
 import imageFigure6_3 from "/images/articles/06_kumamoto/imageFigures/imageFigure3.png";
 import imageFigure6_4 from "/images/articles/06_kumamoto/imageFigures/imageFigure4.png";
 // HISTORICAL SCIENCE
-import mainImage7 from "/images/articles/07_history/test_article_main.png";
+import mainImage7 from "/images/articles/07_history/articleMain.jpg";
 import imageFigure7_1 from "/images/articles/07_history/imageFigures/imageFigure1.jpg";
 import imageFigure7_2 from "/images/articles/07_history/imageFigures/imageFigure2.jpg";
 import imageFigure7_3 from "/images/articles/07_history/imageFigures/imageFigure3.jpeg";
 // LOOK BACK SUMMARY
-import mainImage8 from "/images/articles/08_summary/test_article_main.png";
+import mainImage8 from "/images/articles/08_summary/articleMain.png";
 import imageFigure8_1 from "/images/articles/08_summary/imageFigures/imageFigure1.png";
 import imageFigure8_2 from "/images/articles/08_summary/imageFigures/imageFigure2.png";
 import imageFigure8_3 from "/images/articles/08_summary/imageFigures/imageFigure3.png";
@@ -106,6 +109,7 @@ export const Articles: ArticlesInterface = {
       { url: imageFigure1_3, alt: "" },
       { url: imageFigure1_4, alt: "" },
       { url: imageFigure1_5, alt: "" },
+      { url: imageFigure1_6, alt: "" },
     ],
   },
   [ARTICLE_TYPE.DESIGN_ENGINEER]: {
@@ -131,6 +135,7 @@ export const Articles: ArticlesInterface = {
       { url: imageFigure2_2, alt: "" },
       { url: imageFigure2_3, alt: "" },
       { url: imageFigure2_4, alt: "" },
+      { url: imageFigure2_5, alt: "" },
     ],
   },
   [ARTICLE_TYPE.NEW_LIFE]: {
@@ -189,6 +194,7 @@ export const Articles: ArticlesInterface = {
       { url: imageFigure4_2, alt: "" },
       { url: imageFigure4_3, alt: "" },
       { url: imageFigure4_4, alt: "" },
+      { url: imageFigure4_5, alt: "" },
     ],
   },
   [ARTICLE_TYPE.ACID_COFFEE_TOKYO]: {
