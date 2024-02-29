@@ -26,6 +26,12 @@ const images = [
   {
     src: "/images/whatIDo/risograph.png",
   },
+  {
+    src: "/images/whatIDo/risograph.png",
+  },
+  {
+    src: "/images/whatIDo/risograph.png",
+  },
   // ... Add other images here
 ];
 
