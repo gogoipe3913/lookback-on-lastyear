@@ -9,28 +9,28 @@ import { FadeInContainer } from "../../atoms/FadeInContainer";
 
 const images = [
   {
-    src: "/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/book_30_count.jpg",
+  },
+  {
+    src: "/images/whatIDo/coffee_popup.png",
+  },
+  {
+    src: "/images/whatIDo/coffee_roaster.jpg",
   },
   {
     src: "/images/whatIDo/risograph.png",
   },
   {
-    src: "/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/zine.jpg",
   },
   {
     src: "/images/whatIDo/risograph.png",
   },
   {
-    src: "/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/overseas.jpg",
   },
   {
-    src: "/images/whatIDo/risograph.png",
-  },
-  {
-    src: "/images/whatIDo/risograph.png",
-  },
-  {
-    src: "/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/shortbob.png",
   },
   // ... Add other images here
 ];
@@ -165,7 +165,11 @@ const WhatIDo: React.FC<WhatIDoProps> = ({ className = "" }) => {
                     : style["WhatIDo__sliderContent--masked"] // 前後のスライドにマスクをかける
                 )}
               >
-                <img src={img.src} alt="picture" />
+                <img
+                  src={img.src}
+                  alt="picture"
+                  className={style.WhatIDo__sliderContentImage}
+                />
               </div>
             ))}
           </Slider>
