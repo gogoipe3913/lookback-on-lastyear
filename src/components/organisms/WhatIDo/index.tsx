@@ -9,28 +9,28 @@ import { FadeInContainer } from "../../atoms/FadeInContainer";
 
 const images = [
   {
-    src: "/images/whatIDo/book_30_count.jpg",
+    src: "/images/whatIDo/book_30_count.webp",
   },
   {
-    src: "/images/whatIDo/coffee_popup.png",
+    src: "/images/whatIDo/coffee_popup.webp",
   },
   {
-    src: "/images/whatIDo/coffee_roaster.jpg",
+    src: "/images/whatIDo/coffee_roaster.webp",
   },
   {
-    src: "/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/hotel.webp",
   },
   {
-    src: "/images/whatIDo/zine.jpg",
+    src: "/images/whatIDo/zine.webp",
   },
   {
-    src: "/images/whatIDo/risograph.png",
+    src: "/images/whatIDo/quit_office.webp",
   },
   {
-    src: "/images/whatIDo/overseas.jpg",
+    src: "/images/whatIDo/overseas.webp",
   },
   {
-    src: "/images/whatIDo/shortbob.png",
+    src: "/images/whatIDo/shortbob.webp",
   },
   // ... Add other images here
 ];

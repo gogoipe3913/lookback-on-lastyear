@@ -278,7 +278,7 @@ $timing-function-image: cubic-bezier(0.83, 0, 0.17, 1);
     height: 100%;
     transform: scale(0);
     opacity: 0;
-    background-image: url("../../../../public/images/lookBackPointer/light.png");
+    background-image: url("../../../../public/images/lookBackPointer/light.webp");
     background-size: cover;
     transition-timing-function: $timing-function-image;
     transition-duration: 0.4s;
