@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
 import ScrollIndicator from "../../atoms/ScrollIndicator";
+import classNames from "classnames";
 
 const Top: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // 動画がロードされたときに呼ばれる関数
+  const handleVideoLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div id="Top" className={style.Top}>
-      <div className={style.Top__videoWrapper}>
+      {isLoading && (
+        <div className={style.Loading}>
+          <p className={style.Loading__title}>LOOKBACK ON LASTYEAR</p>
+        </div>
+      )}
+      <div
+        className={classNames(
+          style.Top__videoWrapper,
+          style["Top__videoWrapper--displayed"]
+        )}
+      >
         <p className={style.Top__titleBox}>
           <span className={style.Top__title}>LOOKBACK ON LASTYEAR</span>
         </p>
@@ -16,6 +34,7 @@ const Top: React.FC = () => {
             autoPlay={true}
             loop={true}
             src="/video/topVisualVideo.mp4"
+            onLoadedData={handleVideoLoad}
             className={style.Top__video}
           />
           <div className={style.Top__titleBoxOnImage}>
