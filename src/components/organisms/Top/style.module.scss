@@ -9,6 +9,9 @@
   height: 100svh;
   background-color: $font-color-white;
   z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & .Loading__title {
     transform: scaleX(-1);
