@@ -18,13 +18,13 @@ const images = [
     src: "/images/whatIDo/coffee_roaster.webp",
   },
   {
-    src: "/images/whatIDo/hotel.webp",
+    src: "/images/whatIDo/quit_company.webp",
   },
   {
     src: "/images/whatIDo/zine.webp",
   },
   {
-    src: "/images/whatIDo/quit_office.webp",
+    src: "/images/whatIDo/hotel.webp",
   },
   {
     src: "/images/whatIDo/overseas.webp",
